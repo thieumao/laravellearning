@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
+    dd('Thieu Mao is here ^^!');
     return view('welcome');
 });
