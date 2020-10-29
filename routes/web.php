@@ -19,6 +19,10 @@ Route::get('/news/{id}', function ($id) {
     return "Bài viết số ${id}";
 });
 
+Route::get('/news/{id}/category/{categoryId}', function ($id, $categoryId) {
+    return "Bài viết số ${id} với ${categoryId}";
+});
+
 Route::get('/test', function () {
     return 'Testing';
 });
