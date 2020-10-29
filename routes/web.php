@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/news/{id}', function ($id) {
+    return "Bài viết số ${id}";
+});
+
 Route::get('/test', function () {
     return 'Testing';
 });
