@@ -15,6 +15,17 @@ Route::get('/', function () {
     return view('test');
 });
 
+Route::get('/test', function () {
+    return 'Testing';
+});
+
+Route::get('/user', function () {
+    return 'User Screen';
+});
+
+Route::get('/product', function () {
+    return 'Product Screen';
+});
 
 Route::get('/welcome', function () {
     return view('welcome');
