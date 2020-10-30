@@ -17,15 +17,15 @@ Route::get('/', function () {
 
 Route::get('/test{id}', function ($id) {
     return "Test ${id}";
-})->name('test')->where('id', '[0-9]+');
+})->name('test');
 
 Route::get('/test{id}/part{partid}', function ($id, $partid) {
     return "Test ${id} - Part ${partid}";
 })->name('test.part');
 
-Route::get('/test{id}/part{pardid}/question{questionid}', function ($id, $partid, $questionid) {
+Route::get('/test{id}/part{partid}/question{questionid}', function ($id, $partid, $questionid) {
     return "Test ${id} - Part ${partid} - Question ${questionid}";
-})->name('test.part.question');
+})->name('test.part.question')->where('questionid', '[0-9]+');
 
 Route::get('/user', function () {
     return view('user');
