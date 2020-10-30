@@ -12,4 +12,9 @@ class LearningController extends Controller
     {
         return 'Learning Screen';
     }
+
+    public function create()
+    {
+        return view('ETS2020/create');
+    }
 }
