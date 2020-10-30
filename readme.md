@@ -79,3 +79,6 @@ php artisan serve
 
 # Create new controller
 php artisan make:controller controllerName
+
+# See route list
+php artisan route:list
