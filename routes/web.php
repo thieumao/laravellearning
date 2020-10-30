@@ -13,7 +13,15 @@
 
 Route::get('/', function () {
     return view('home');
+})->name('home');
+
+Route::get('/test/{id}', function ($id) {
+    return "Test ${id}";
 });
+
+Route::get('/user', function () {
+    return view('user');
+})->name('user');;
 
 Route::get('/news/{id}', function ($id) {
     return "Bài viết số ${id}";
@@ -21,14 +29,6 @@ Route::get('/news/{id}', function ($id) {
 
 Route::get('/news/{id}/category/{categoryId}', function ($id, $categoryId) {
     return "Bài viết số ${id} với ${categoryId}";
-});
-
-Route::get('/test', function () {
-    return 'Testing';
-});
-
-Route::get('/user', function () {
-    return 'User Screen';
 });
 
 Route::get('/product', function () {
