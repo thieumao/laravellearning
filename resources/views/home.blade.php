@@ -1,3 +1,5 @@
+<a href="{{ route('learning.create') }}">Create</a>
+<hr />
 <a href="{{ route('learning') }}">Open Learning Screen</a>
 <hr />
 <a href="{{ route('test', ['id' => 8]) }}">Open Test 8</a>

@@ -18,8 +18,8 @@ Route::get('/', 'ETS2020\HomeController@index')->name('home');
 Route::prefix('ETS2020')->namespace('ETS2020')->group(function () {
     Route::get('/learning', 'LearningController@index')->name('learning');
     Route::get('/learning/create', 'LearningController@create')->name('learning.create');
-    Route::post('/learning', 'LearningController@store')->name('learning.store');
-    Route::put('/learning', 'LearningController@update')->name('learning.update');
+    Route::post('/learning/store', 'LearningController@store')->name('learning.store');
+    Route::put('/learning/update', 'LearningController@update')->name('learning.update');
 
     Route::get('/test{id}', 'TestController@index')->name('test');
     Route::get('/test{id}/part{partid}', 'PartController@index')->name('test.part');

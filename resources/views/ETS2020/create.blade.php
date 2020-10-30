@@ -1,8 +1,9 @@
-<h2>Learning Form</h2>
+<h2>Learning Form 2</h2>
 <style>
   input { margin-bottom: 16px; }
 </style>
 <form action="{{ route('learning.update') }}" method='post'>
+  @method('put')
   @csrf
   <input type="text" name="fullname" placeholder="Full Name" />
   <br />
