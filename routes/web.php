@@ -10,11 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('user');
-})->name('home');
 Route::get('/', 'ETS2020\HomeController@index')->name('home');
+
+// Route::resource('name', 'NameController')->except(['create', 'edit']);
+Route::resource('name', 'NameController')->only(['index']);
+
 Route::prefix('ETS2020')->namespace('ETS2020')->group(function () {
     Route::get('/learning', 'LearningController@index')->name('learning');
     Route::get('/learning/create', 'LearningController@create')->name('learning.create');

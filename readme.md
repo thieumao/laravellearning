@@ -82,3 +82,6 @@ php artisan make:controller controllerName
 
 # See route list
 php artisan route:list
+
+# Create Controller Resource
+php artisan make:controller NameController --resource
