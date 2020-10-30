@@ -20,7 +20,13 @@ class LearningController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+        dd(__METHOD__, $request->all());
+        // return view('ETS2020/store');
+    }
+
+    public function update(Request $request)
+    {
+        dd(__METHOD__, $request->all());
         // return view('ETS2020/store');
     }
 }

@@ -2,7 +2,7 @@
 <style>
   input { margin-bottom: 16px; }
 </style>
-<form action="{{ route('learning.store') }}" method='post'>
+<form action="{{ route('learning.update') }}" method='post'>
   @csrf
   <input type="text" name="fullname" placeholder="Full Name" />
   <br />
