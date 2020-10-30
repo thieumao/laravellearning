@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('/test{id}', function ($id) {
     return "Test ${id}";
-})->name('test');
+})->name('test')->where('id', '[0-9]+');
 
 Route::get('/test{id}/part{partid}', function ($id, $partid) {
     return "Test ${id} - Part ${partid}";
