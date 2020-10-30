@@ -15,9 +15,17 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/test/{id}', function ($id) {
+Route::get('/test{id}', function ($id) {
     return "Test ${id}";
 })->name('test');
+
+Route::get('/test{id}/part{partid}', function ($id, $partid) {
+    return "Test ${id} - Part ${partid}";
+})->name('test.part');
+
+Route::get('/test{id}/part{pardid}/question{questionid}', function ($id, $partid, $questionid) {
+    return "Test ${id} - Part ${partid} - Question ${questionid}";
+})->name('test.part.question');
 
 Route::get('/user', function () {
     return view('user');
