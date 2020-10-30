@@ -1,1 +1,1 @@
-<h2>Learning Form</h2>
+<h2>Learning Store</h2>

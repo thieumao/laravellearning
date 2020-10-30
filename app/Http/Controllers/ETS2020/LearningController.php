@@ -18,8 +18,9 @@ class LearningController extends Controller
         return view('ETS2020/create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        return view('ETS2020/store');
+        dd($request->all());
+        // return view('ETS2020/store');
     }
 }
