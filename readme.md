@@ -74,5 +74,8 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 
 ## Command
 
-Start:
+# Run project
 php artisan serve
+
+# Create new controller
+php artisan make:controller controllerName
