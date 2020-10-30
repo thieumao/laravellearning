@@ -15,17 +15,19 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/test{id}', function ($id) {
-    return "Test ${id}";
-})->name('test');
-
-Route::get('/test{id}/part{partid}', function ($id, $partid) {
-    return "Test ${id} - Part ${partid}";
-})->name('test.part');
-
-Route::get('/test{id}/part{partid}/question{questionid}', function ($id, $partid, $questionid) {
-    return "Test ${id} - Part ${partid} - Question ${questionid}";
-})->name('test.part.question')->where('questionid', '[0-9]+');
+Route::group(['prefix' => 'ETS2020'], function () {
+    Route::get('/test{id}', function ($id) {
+        return "Test ${id}";
+    })->name('test');
+    
+    Route::get('/test{id}/part{partid}', function ($id, $partid) {
+        return "Test ${id} - Part ${partid}";
+    })->name('test.part');
+    
+    Route::get('/test{id}/part{partid}/question{questionid}', function ($id, $partid, $questionid) {
+        return "Test ${id} - Part ${partid} - Question ${questionid}";
+    })->name('test.part.question')->where('questionid', '[0-9]+');
+});
 
 Route::get('/user', function () {
     return view('user');
