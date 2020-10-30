@@ -17,4 +17,9 @@ class LearningController extends Controller
     {
         return view('ETS2020/create');
     }
+
+    public function store()
+    {
+        return view('ETS2020/store');
+    }
 }
