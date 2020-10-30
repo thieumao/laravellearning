@@ -17,11 +17,11 @@ Route::get('/', function () {
 
 Route::get('/test/{id}', function ($id) {
     return "Test ${id}";
-});
+})->name('test');
 
 Route::get('/user', function () {
     return view('user');
-})->name('user');;
+})->name('user');
 
 Route::get('/news/{id}', function ($id) {
     return "Bài viết số ${id}";

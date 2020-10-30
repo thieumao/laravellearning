@@ -1,4 +1,6 @@
-<a href="/test/10">Open Test 10</a>
+<a href="/test/7">Open Test 7</a>
+<hr />
+<a href="{{ route('test', ['id' => 8]) }}">Open Test 8</a>
 <hr />
 <a href="{{ route('user') }}">Open User Screen</a>
 <hr />
